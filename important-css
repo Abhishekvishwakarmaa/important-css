@@ -1,0 +1,156 @@
+
+  -- .sub-boxx-main:nth-child(1) {
+    order:1;
+  }
+  .sub-boxx-main:nth-child(2) {
+    order:3;
+  }
+  .sub-boxx-main2 {
+    order:2;
+  }
+
+  --style="background-image: url('{{ section.settings.reg-sec_image | img_url: 'master' }}');
+
+  -- top: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+
+
+  ----
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+  <script>
+    document.getElementById('Details-HeaderSubMenu-catalog-men').open = true;
+    document.getElementById('Details-HeaderSubMenu-catalog-women').open = true;
+    document.getElementById('Details-HeaderSubMenu-catalog-accessories-others').open = true;
+    document.getElementById('Details-HeaderSubMenu-catalog-other').open = true;
+
+    
+    $(document).ready(function() {
+$('header-menu > details').hover(
+  function() {
+    $(this).attr('open', 'true');
+  },
+  function() {
+    $(this).removeAttr('open');
+  }
+);
+}); 
+  </script>
+
+
+-------{{ template | handleize }}   {{ template }}
+
+---------https://wa.me/+447546347848
+
+---------target="_blank"
+
+------  <form method="post" action="/cart/">
+  <input name="id" value="{{ card_product.selected_or_first_available_variant.id }}" type="hidden" />
+  <input name="add" value="ADD TO CART" type="submit" />
+</form>
+
+content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 59px;
+    border-bottom: 1px solid;
+
+    ----{
+      "type": "color",
+      "id": "body_bg",
+      "label": "Background",
+      "default": "#fff"
+    },
+style="background: {{ section.settings.body_bg }}
+
+{
+  "type": "color_background",
+  "id": "background",
+  "label": "Background",
+  "default": "linear-gradient(#ffffff, #000000)"
+}
+
+-----------.rr-{{ forloop.index }}
+------------    transform: translateY(30%);
+
+--------when need to remove default blue box in mobile view after click
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+button:focus {
+  outline: none !important;
+}
+label {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label:focus {
+  outline: none !important;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+a:focus {
+  outline: none !important;
+}
+
+--------------
+slideshow-component .slideshow.banner{
+  scroll-snap-type: none !important;
+  scroll-behavior: auto !important;
+  }
+  slideshow-component .slideshow.banner[aria-live="off"] "idden="false" {
+          animation: fadeIn 80ms 1800ms;
+  }
+  @keyframes fadeIn {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+  }
+
+  --------fade-in -webkit-touch-callout
+  slideshow-component .slideshow.banner{
+    scroll-snap-type: none !important;
+    scroll-behavior: auto !important;
+  }
+  .slideshow__slide[aria-hidden="true"] {
+     opacity:0.5;
+    transition:  2s ease-in-out;
+  }
+  .slideshow__slide{
+    opacity:1;
+    transition:  2s ease-in-out;
+  }
+
+  ---when for loop is not there and need to add forloop.index
+  {% render 'card-collection',
+  card_collection: block.settings.collection,
+  media_aspect_ratio: section.settings.image_ratio,
+  co: forloop.index,
+  columns: columns,
+  placeholder_image: placeholder_image
+%}
+
+<h3 class="card__heading  custom-cart-{{ co }}">
