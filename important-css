@@ -11,6 +11,13 @@
 
   --style="background-image: url('{{ section.settings.reg-sec_image | img_url: 'master' }}');
     style="background-image: url('{{ section.settings.reg-sec_image | img_url: 'master' }}');">
+     {
+      "type": "image_picker",
+      "id": "obanner_image",
+      "label": "Background Image First",
+      "info": "Upload an image to use as the background."
+    }
+
 
   -- top: 0;
   height: 100%;
