@@ -162,3 +162,14 @@ slideshow-component .slideshow.banner{
 %}
 
 <h3 class="card__heading  custom-cart-{{ co }}">
+
+-------------------------
+   font-weight: 600;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 12px;
+        margin-bottom: 10px;
+need to hide heading or discription 
