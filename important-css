@@ -1,3 +1,9 @@
+-------------------for productd pills
+style="{% if img != blank %} background-image: url({{ img }});{% else %}background-color: {{ value | split: ' ' | last | handle }};{% endif %}background-size: cover;
+                background-repeat: no-repeat;" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+
+
+
 
   -- .sub-boxx-main:nth-child(1) {
     order:1;
